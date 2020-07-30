@@ -1,8 +1,8 @@
-Sync Nested Group membership in a single ADDS Group
+Sync nested group membership in a single ADDS Group
 ===================================================
 
 ## 1. Introduction
-Currently Azure Active Directory doesn't support Nest Group membership.
+Currently Azure Active Directory doesn't support nested group membership.
 You can get the details in the following reference:
 
 [Add support for nested groups in Azure AD (app access and provisioning, group-based licensing)](https://feedback.azure.com/forums/169401-azure-active-directory/suggestions/15718164-add-support-for-nested-groups-in-azure-ad-app-acc)
@@ -28,6 +28,6 @@ The script will do the following tasks:
 ## 2. How to use the Script
 To use the script basically invoke the script name with the name of the group you would like to scan:
 
-        .\SyncNestedGroup.ps1 -Group "<GroupName>"
+        .\SyncNestedGroup.ps1 -Group "<GroupName>" -Path "OU=<Organization-Unit Name>,DC=<Domain Name>,DC=DC=<Domain Name>"
 
 To keep the created group in sync just execute the script again.

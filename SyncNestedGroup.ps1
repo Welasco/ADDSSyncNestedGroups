@@ -2,7 +2,9 @@
 param 
 (
     [Parameter(Mandatory)] 
-    [string]$Group 
+    [string]$Group,
+    [Parameter(Mandatory)] 
+    [string]$Path
 )
 
 $global:UsersArray = @()
@@ -53,14 +55,16 @@ function GenerateGroupMembership{
     param 
     (
         [Parameter(Mandatory)] 
-        [string]$Group 
+        [string]$Group,
+        [Parameter(Mandatory)] 
+        [string]$Path    
     )
     $NewGroup = ($Group+"-Result")
     try {
         Get-ADGroup $NewGroup | Out-Null
     }
     catch {
-        New-ADGroup -Name $NewGroup -DisplayName $NewGroup -SamAccountName $NewGroup -Path "OU=RootGroups,DC=VWS,DC=Local" -GroupScope Global -GroupCategory Security -ErrorAction SilentlyContinue
+        New-ADGroup -Name $NewGroup -DisplayName $NewGroup -SamAccountName $NewGroup -Path $Path -GroupScope Global -GroupCategory Security -ErrorAction SilentlyContinue
     }
     
     Get-NestedGroupMember -Group $Group
@@ -68,4 +72,4 @@ function GenerateGroupMembership{
     CleanGroupMemberShip -Group $NewGroup
 }
 
-GenerateGroupMembership -Group $Group
+GenerateGroupMembership -Group $Group -Path $Path 
