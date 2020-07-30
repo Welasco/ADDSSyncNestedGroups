@@ -25,7 +25,7 @@ The script will do the following tasks:
 - Add all loaded users to a new group "\<GroupName\>-Result"
 - Clean all removed users from the new group "\<GroupName\>-Result"
 
-## 2. How to use the Script
+## 3. How to use the Script
 To use the script basically invoke the script name with the name of the group you would like to scan:
 
         .\SyncNestedGroup.ps1 -Group "<GroupName>" -Path "OU=<Organization-Unit Name>,DC=<Domain Name>,DC=DC=<Domain Name>"
