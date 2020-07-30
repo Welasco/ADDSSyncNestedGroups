@@ -30,4 +30,4 @@ To use the script basically invoke the script name with the name of the group yo
 
         .\SyncNestedGroup.ps1 -Group "<GroupName>" -Path "OU=<Organization-Unit Name>,DC=<Domain Name>,DC=DC=<Domain Name>"
 
-To keep the created group in sync just execute the script again.
+To keep the group in sync just execute the script again.
