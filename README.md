@@ -27,6 +27,8 @@ The script will do the following tasks:
 
 At the end you can assign the permission using this new group without losing your group hierarchy.
 
+Script link: https://github.com/Welasco/ADDSSyncNestedGroups/blob/master/SyncNestedGroup.ps1
+
 ## 3. How to use the Script
 To use the script basically invoke the script name with the name of the group you would like to scan:
 
