@@ -25,6 +25,8 @@ The script will do the following tasks:
 - Add all loaded users to a new group "\<GroupName\>-Result"
 - Clean all removed users from the new group "\<GroupName\>-Result"
 
+At the end you can assign the permission using this new group without losing your group hierarchy.
+
 ## 3. How to use the Script
 To use the script basically invoke the script name with the name of the group you would like to scan:
 
